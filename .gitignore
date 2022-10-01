@@ -1,5 +1,4 @@
 test.py
-frontend/
 test/
 *.DS_Store
 recommendationFramework/dataProcessing.py
