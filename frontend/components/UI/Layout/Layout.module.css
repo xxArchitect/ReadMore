@@ -1,3 +1,10 @@
 .mainContent {
     position: relative;
 }
+
+/* Make all sections inherit the same styling. */
+.mainContent section {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 7.5vh;
+}
