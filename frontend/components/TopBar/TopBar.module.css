@@ -69,6 +69,7 @@
 
 .buttons button:last-child:after {
     background-color: var(--main-color-2);
+    height: 3px;
 }
 
 .circle {
