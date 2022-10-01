@@ -1,0 +1,79 @@
+.topBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--main-color-1);
+    margin: 0 0 0 2.125rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.buttons {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--main-color-1)
+}
+
+.buttons button {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+    padding: 0;
+    background: none;
+    border: none;
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+}
+
+/* Animated Underline Hover */
+/* Source: https://codepen.io/jstn/pen/mdoOZJ */
+.buttons button:after {
+    background: #0D1713;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.buttons button:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.buttons button:last-child {
+    color: var(--main-color-2);
+    font-weight: 600;
+}
+
+.buttons button:last-child:after {
+    background-color: var(--main-color-2);
+}
+
+.circle {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background-color: #CECAC3;
+}
