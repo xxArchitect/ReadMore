@@ -1,0 +1,59 @@
+.searchBarOverlay {
+    width: 100%;
+    position: fixed;
+
+    --search-bar-height: 8.5%;
+    height: var(--search-bar-height);
+    top: calc(50% - var(--search-bar-height));
+    max-height: 6.25rem;
+}
+
+.searchBar {
+    --search-bar-width: 35%;
+    width: var(--search-bar-width);
+    max-width: 37.5rem;
+    height: 100%;
+    margin: 0 auto;
+
+
+    background: inherit;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 24px 27px rgba(0, 0, 0, 0.25);
+
+    border-radius: 1.56rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar svg {
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.searchBar p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--main-color-1);
+    margin: 0 0 0 0.5rem;
+}
+
+/* Frosted Glass Effect */
+/* Source: https://codepen.io/tutsplus/pen/zymXoy */
+.searchBar:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(15px);
+    margin: -20px;
+}
