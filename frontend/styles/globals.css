@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat:wght@300;400;500;600&display=swap');
+
 :root {
     --bg-color-1: #F1F1F1;
     --bg-color-2: #F2EBE3;
+    --main-color-1: #0D1713;
+    --main-color-2: #4D7F7B;
 }
 
 html,
