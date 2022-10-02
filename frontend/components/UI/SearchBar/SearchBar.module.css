@@ -4,8 +4,7 @@
 
     --search-bar-height: 8.5%;
     height: var(--search-bar-height);
-    top: calc(50% - var(--search-bar-height));
-    max-height: 6.25rem;
+    top: calc((50% - var(--search-bar-height)));
 }
 
 .searchBar {
@@ -15,13 +14,12 @@
     height: 100%;
     margin: 0 auto;
 
-
+    border-radius: 1.56rem;
+    
     background: inherit;
     z-index: 1;
     overflow: hidden;
     box-shadow: 0 24px 27px rgba(0, 0, 0, 0.25);
-
-    border-radius: 1.56rem;
 
     display: flex;
     justify-content: center;
