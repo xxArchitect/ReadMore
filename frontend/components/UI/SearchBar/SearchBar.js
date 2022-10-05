@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import classes from "./SearchBar.module.css";
 import MagnifyingGlass from "../Icons/MagnifyingGlass";
 
-const SearchBar = forwardRef((props, ref) => {
+function SearchBar(props, ref) {
   const searchBarClass =
     props.intersection === "Landing"
       ? classes.searchBarLandingSection
@@ -25,6 +25,6 @@ const SearchBar = forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
+}
 
-export default SearchBar;
+export default forwardRef(SearchBar);
