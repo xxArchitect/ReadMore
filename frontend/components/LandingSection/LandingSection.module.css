@@ -1,3 +1,4 @@
 .landingPage {
     background-color: var(--bg-color-1);
+    position: relative;
 }

@@ -1,3 +1,4 @@
 .topRatedBooksPage {
     background-color: var(--bg-color-2);
+    position: relative;
 }
