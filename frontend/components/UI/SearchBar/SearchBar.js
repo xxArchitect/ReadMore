@@ -3,18 +3,29 @@ import classes from "./SearchBar.module.css";
 import MagnifyingGlass from "../Icons/MagnifyingGlass";
 
 function SearchBar(props, ref) {
-  const searchBarClass =
-    props.intersection === "Landing"
-      ? classes.searchBarLandingSection
-      : props.intersection === "TopRatedBooks"
-      ? classes.searchBarTopRatedBooksSection
-      : classes.searchBarSearchBookByGenre;
+  let searchBarClass;
+
+  switch (props.intersection) {
+    case "Landing":
+      searchBarClass = classes.landing;
+      break;
+    case "TopRatedBooks":
+      searchBarClass = classes.topRatedBooks;
+      break;
+    case "SearchBooksByGenre":
+      searchBarClass = classes.searchBooksByGenre;
+      break;
+    default:
+      searchBarClass = classes.landing;
+  }
+
+  const searchBarWrapperClass =
+    props.intersection === "Landing" ? classes.landing : "";
 
   return (
     <div
-      className={classes.searchBarWrapper}
+      className={`${classes.searchBarWrapper} ${searchBarWrapperClass}`}
       style={{
-        height: props.intersection === "Landing" ? "8.5%" : "6.5%",
         position: props.position.position,
         top: props.position.top,
       }}

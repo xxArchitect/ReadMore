@@ -1,5 +1,5 @@
 import classes from "./LandingSection.module.css";
 
-export default function LandingSection({ children }) {
-  return <section className={classes.landingPage}>{children}</section>;
+export default function LandingSection(props) {
+  return <section className={classes.landingPage}>{props.children}</section>;
 }
