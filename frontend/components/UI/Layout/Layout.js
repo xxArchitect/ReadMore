@@ -4,11 +4,11 @@ import classes from "./Layout.module.css";
 /**
  * Renders main component which contains the top bar.
  * */
-export default function Layout({ children }) {
+export default function Layout(props) {
   return (
     <main className={classes.mainContent}>
       <TopBar />
-      {children}
+      {props.children}
     </main>
   );
 }
