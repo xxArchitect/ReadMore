@@ -61,7 +61,10 @@ export default function HomePage() {
         onChange={setTopRatedBooksIntersect}
         threshold={[...range(0.45, 11, 0.01), ...range(0.95, 6, 0.01)]}
       >
-        <TopRatedBooksSection ref={topRatedBooksSectionRef}>
+        <TopRatedBooksSection
+          ref={topRatedBooksSectionRef}
+          intersection={searchBarIntersect}
+        >
           <SearchBar
             ref={searchBarRef}
             intersection={searchBarIntersect}

@@ -1,7 +1,32 @@
 .bookCoverContainer {
-    width: 12.5%;
+    width: 25%;
     height: 100%;
     max-height: 100%;
     margin: 0 0.5%;
     position: relative;
+    transition: transform 0.3s;
+}
+
+/* Use pseudo-element to create shadow */
+.bookCoverContainer.shadow:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    height: 15%;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.05);
+    filter: blur(1rem);
+    transform: skewX(60deg);
+    transition: all 0.3s;
+}
+
+@media (min-width: 1500px) {
+    .bookCoverContainer.shadow:after {
+        bottom: 0;
+        left: 0;
+        height: 15%;
+        width: 60%;
+    }
 }

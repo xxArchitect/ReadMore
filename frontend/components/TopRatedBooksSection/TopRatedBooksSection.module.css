@@ -1,4 +1,152 @@
 .topRatedBooksPage {
     background-color: var(--bg-color-2);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.sign {
+    color: #CECAC3;
+    width: 100%;
+    text-align: center;
+}
+
+.bigSign {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8rem;
+    display: block;
+    height: 22.5%;
+    margin: 0;
+}
+
+.smallSign {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    height: 15%;
+    margin: auto;
+}
+
+.topRatedBooksContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.bookContainer {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.bookContainer.slide {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s;
+}
+
+.bookContainer:hover {
+    cursor: pointer;
+}
+
+.bookContainer:hover .link {
+    margin: 0 5%;
+}
+
+.bookContainer:hover .leftLine {
+    width: 25%;
+}
+
+.bookContainer:hover .rightLine {
+    width: 25%;
+    border: 1px solid #0D1713;
+}
+
+.leftLine {
+    width: 60%;
+    border: 1px solid #0D1713;
+    transition: width 0.3s ease;
+}
+
+.rightLine {
+    width: 0;
+    border: none;
+    transition: width 0.3s ease;
+}
+
+.link {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0 0 0 5%;
+    padding: 0;
+    color: #0D1713;
+    display: block;
+    width: 35%;
+    transition: all 0.3s ease;
+}
+
+.bookLink {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    height: 8%;
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    left: 51%;
+    z-index: 1;
+    transition: width 0.3s;
+    transform: translateX(-50%);
+}
+
+@media (min-aspect-ratio: 5/4) {
+    .link {
+        font-size: 1rem;
+    }
+
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-aspect-ratio: 3/2) {
+    .link {
+        font-size: 1.35rem;
+    }
+
+    .bookLink {
+        top: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 7/4) {
+    .leftLine {
+        width: 40%;
+    }
+
+    .bookContainer:hover .leftLine,
+    .bookContainer:hover .rightLine {
+        width: 17.5%;
+    }
 }
