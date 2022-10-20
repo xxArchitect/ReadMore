@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 7.5vh;
-    min-height: 60px;
+    height: 5.5vh;
+    min-height: 65px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .logo {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--main-color-1);
     margin: 0 0 0 2.125rem;
     font-family: 'Cormorant Garamond', serif;
@@ -32,7 +32,7 @@
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     letter-spacing: 0.05em;
     padding: 0;
     background: none;
@@ -52,7 +52,7 @@
     bottom: 0;
     content: "";
     display: block;
-    height: 2px;
+    height: 1px;
     left: 50%;
     position: absolute;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -71,12 +71,36 @@
 
 .buttons button:last-child:after {
     background-color: var(--main-color-2);
-    height: 3px;
+    height: 2px;
 }
 
 .circle {
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 0.35rem;
+    height: 0.35rem;
     border-radius: 50%;
     background-color: #CECAC3;
+}
+
+@media (min-width: 1000px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .buttons button {
+        font-size: 1.25rem;
+    }
+
+    .buttons button:after {
+        height: 2px;
+    }
+
+    .buttons button:last-child:after {
+        height: 3px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    .topBar {
+        height: 5.5vh;
+    }
 }
