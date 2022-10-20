@@ -8,6 +8,18 @@
     max-width: 100%;
     height: 100vh;
     max-height: 100vh;
-    padding-top: 7.5vh;
+    padding-top: 60px;
     overflow-x: hidden;
+}
+
+@media (min-width: 1000px) and (min-height: 500px) {
+    .mainContent section {
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    .mainContent section {
+        padding-top: 5.5vh;
+    }
 }
