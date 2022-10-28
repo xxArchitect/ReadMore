@@ -12,11 +12,12 @@
     content: "";
     position: absolute;
     z-index: -1;
-    bottom: 0;
-    left: 0;
-    height: 15%;
-    width: 60%;
-    background-color: rgba(0, 0, 0, 0.05);
+    top: 75%;
+    left: -25%;
+    height: 5%;
+    width: 70%;
+    /*background-color: rgba(0, 0, 0, 0.05);*/
+    background: #d41900;
     filter: blur(1rem);
     transform: skewX(60deg);
     transition: all 0.3s;
