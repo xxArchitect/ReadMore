@@ -4,31 +4,32 @@
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .sign {
     color: #CECAC3;
     width: 100%;
     text-align: center;
+    display: block;
+    margin: 0;
 }
 
 .bigSign {
     font-family: 'Cormorant Garamond', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 8rem;
-    display: block;
-    height: 22.5%;
-    margin: 0;
+    font-size: 3rem;
+    margin: -10% 0 0 0;
 }
 
 .smallSign {
     font-family: 'Cormorant Garamond', serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 4rem;
-    height: 15%;
-    margin: auto;
+    font-size: 2rem;
+    margin: 4.6005% 0 0 0;
 }
 
 .topRatedBooksContainer {
@@ -38,7 +39,8 @@
     justify-content: space-evenly;
     height: 50%;
     width: 100%;
-    margin-bottom: 4%;
+    max-width: 140rem;
+    margin: 0 auto 0;
 }
 
 .bookContainer {
@@ -68,38 +70,12 @@
 }
 
 .bookContainer:hover .leftLine {
-    width: 25%;
+    width: 27.5%;
 }
 
 .bookContainer:hover .rightLine {
-    width: 25%;
+    width: 27.5%;
     border: 1px solid #0D1713;
-}
-
-.leftLine {
-    width: 60%;
-    border: 1px solid #0D1713;
-    transition: width 0.3s ease;
-}
-
-.rightLine {
-    width: 0;
-    border: none;
-    transition: width 0.3s ease;
-}
-
-.link {
-    font-family: 'Montserrat', serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 0 0 0 5%;
-    padding: 0;
-    color: #0D1713;
-    display: block;
-    width: 35%;
-    transition: all 0.3s ease;
 }
 
 .bookLink {
@@ -120,33 +96,784 @@
     transform: translateX(-50%);
 }
 
-@media (min-aspect-ratio: 5/4) {
-    .link {
-        font-size: 1rem;
+.leftLine {
+    width: 60%;
+    border: 1px solid #0D1713;
+    transition: width 0.3s ease;
+}
+
+.rightLine {
+    width: 0;
+    border: none;
+    transition: width 0.3s ease;
+}
+
+.link {
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.5rem;
+    text-align: center;
+    margin: 0 0 0 5%;
+    padding: 0;
+    color: #0D1713;
+    display: block;
+    min-width: 40%;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Adapt book link for different screen sizes */
+
+/* -------------- min-width: 500px -------------- */
+
+@media (min-width: 500px) and (min-height: 600px) {
+    .topRatedBooksContainer {
+        margin: -2.5% auto 0;
     }
 
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* -------------- min-width: 600px -------------- */
+
+@media (min-width: 600px) and (min-height: 500px) {
     .bookLink {
         top: 95%;
     }
 }
 
-@media (min-aspect-ratio: 3/2) {
-    .link {
-        font-size: 1.35rem;
+@media (min-width: 600px) and (min-height: 600px) {
+    .bigSign {
+        font-size: 3.25rem;
+        margin: -5% 0 0 0;
+    }
+
+    .smallSign {
+        font-size: 2rem;
+        margin: 2.5% 0 0 0;
+    }
+
+    .bookLink {
+        top: 90%;
+    }
+
+    .topRatedBooksContainer {
+        margin: -2.5% auto 0;
+    }
+}
+
+/* -------------- min-width: 700px -------------- */
+
+@media (min-width: 700px) and (min-height: 500px) {
+    .bigSign {
+        margin: -5% 0 0;
     }
 
     .bookLink {
         top: 100%;
     }
+
+    .topRatedBooksContainer {
+        margin: 2.5% auto 0;
+    }
 }
 
-@media (min-aspect-ratio: 7/4) {
-    .leftLine {
-        width: 40%;
+@media (min-width: 700px) and (min-height: 600px) {
+    .bookLink {
+        top: 92.5%;
     }
 
-    .bookContainer:hover .leftLine,
-    .bookContainer:hover .rightLine {
-        width: 17.5%;
+    .topRatedBooksContainer {
+        margin: 0 auto;
+    }
+
+    .link {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 700px) and (min-height: 700px) {
+    .bigSign {
+        font-size: 4rem;
+    }
+
+    .bookLink {
+        top: 90%;
+    }
+
+    .topRatedBooksContainer {
+        margin: -2.5% auto 0;
+    }
+}
+
+/* -------------- min-width: 800px -------------- */
+
+@media (min-width: 800px) and (min-height: 500px) {
+    .bookLink {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 800px) and (min-height: 600px) {
+    .bookLink {
+        top: 100%;
+        width: 100% !important;
+    }
+
+    .topRatedBooksContainer {
+        margin: 2.5% auto;
+    }
+}
+
+@media (min-width: 800px) and (min-height: 700px) {
+    .topRatedBooksContainer {
+        margin: 0 auto;
+    }
+
+    .bookLink {
+        top: 92.5%;
+    }
+
+    .bigSign {
+        margin-top: -5%;
+    }
+
+    .smallSign {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 800px) and (min-height: 800px) {
+    .bigSign {
+        font-size: 5rem;
+        margin: -7.5% 0 0;
+    }
+
+    .smallSign {
+        font-size: 3rem;
+    }
+
+    .bookLink {
+        top: 85%;
+    }
+
+    .link {
+        font-size: 0.9rem;
+    }
+}
+
+/* -------------- min-width: 900px -------------- */
+
+@media (min-width: 900px) and (min-height: 500px) {
+    .bookLink {
+        width: 70% !important;
+    }
+}
+
+@media (min-width: 900px) and (min-height: 600px) {
+    .bookLink {
+        width: 90% !important;
+    }
+}
+
+@media (min-width: 900px) and (min-height: 700px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-width: 900px) and (min-height: 800px) {
+    .bookLink {
+        top: 91.75%;
+    }
+}
+
+/* -------------- min-width: 1000px -------------- */
+
+@media (min-width: 1000px) and (min-height: 500px) {
+    .bookLink {
+        width: 60% !important;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 600px) {
+    .bookLink {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+    .bookLink {
+        top: 100%;
+        width: 90% !important;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+
+    .bigSign {
+        margin-bottom: 1.5%;
+    }
+
+    .smallSign {
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    .bookLink {
+        top: 92.5%;
+        width: 95% !important;
+        max-width: 17.5rem !important;
+    }
+
+    .bigSign {
+        font-size: 6rem;
+    }
+
+    .smallSign {
+        font-size: 3.5rem;
+    }
+
+    .link {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 900px) {
+    .bigSign {
+        margin-top: -2.5%;
+    }
+
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1100px ------- */
+
+@media (min-width: 1100px) and (min-height: 500px) {
+    .bigSign {
+        margin-top: 0;
+    }
+
+    .bookLink {
+        max-width: 9.375rem !important;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 600px) {
+    .bookLink {
+        top: 100%;
+        max-width: 11.5rem !important;
+    }
+
+    .bigSign {
+        margin-bottom: 3.5%;
+        font-size: 4rem;
+    }
+
+    .smallSign {
+        margin-top: 2.5%;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 700px) {
+    .bookLink {
+        top: 100%;
+        max-width: 15rem !important;
+    }
+
+    .bigSign {
+        margin: -5% 0 1.5% 0;
+        font-size: 6rem;
+    }
+
+    .smallSign {
+        margin-top: 3.5%;
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 800px) {
+    .bookLink {
+        top: 100%;
+    }
+
+    .link {
+        font-size: 1.15rem;
+    }
+
+    .bigSign {
+        margin-top: -5%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 900px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 1000px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 1100px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1200px ------- */
+
+@media (min-width: 1200px) and (min-height: 900px) {
+    .bookLink {
+        max-width: 18.5rem !important;
+        top: 100%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1000px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1100px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1200px) {
+    .bookLink {
+        top: 85%;
+    }
+
+    .bigSign {
+        font-size: 6.5rem;
+        margin-bottom: 0;
+    }
+
+    .smallSign {
+        font-size: 4rem;
+        margin-top: 2.5%;
+    }
+}
+
+/* ------- min-width: 1250px ------- */
+
+@media (min-width: 1250px) and (min-height: 1000px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+/* ------- min-width: 1300px ------- */
+
+@media (min-width: 1300px) and (min-height: 700px) {
+    .bookLink {
+        width: 87.5% !important;
+    }
+
+    .bigSign {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1000px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1100px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1200px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1300px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1350px ------- */
+
+@media (min-width: 1350px) and (min-height: 700px) {
+    .bookLink {
+        width: 85% !important;
+    }
+}
+
+@media (min-width: 1350px) and (min-height: 1000px) {
+    .bookLink {
+        top: 97.5%;
+    }
+}
+
+@media (min-width: 1350px) and (min-height: 1100px) {
+    .bookLink {
+        top: 92.5%;
+        width: 90% !important;
+    }
+}
+
+/* ------- min-width: 1400px ------- */
+
+@media (min-width: 1400px) and (min-height: 700px) {
+    .bookLink {
+        width: 82.5% !important;
+    }
+}
+
+@media (min-width: 1400px) and (min-height: 1000px) {
+    .bookLink {
+        top: 100%;
+        max-width: 22rem !important;
+    }
+}
+
+@media (min-width: 1400px) and (min-height: 1100px) {
+    .bookLink {
+        top: 95%;
+    }
+
+    .link {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1400px) and (min-height: 1200px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1400px) and (min-height: 1300px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1400px) and (min-height: 1400px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1450px ------- */
+
+@media (min-width: 1450px) and (min-height: 700px) {
+    .bookLink {
+        width: 80% !important;
+    }
+}
+
+/* ------- min-width: 1500px ------- */
+
+@media (min-width: 1500px) and (min-height: 800px) {
+    .bookLink {
+        max-width: 18.5rem !important;
+    }
+
+    .bigSign {
+        margin-top: -1.5%;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 1100px) {
+    .bookLink {
+        top: 97.5%;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 1200px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 1300px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 1400px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 1500px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1550px ------- */
+
+@media (min-width: 1550px) and (min-height: 1100px) {
+    .bookLink {
+        top: 100%;
+        max-width: 24rem !important;
+    }
+}
+
+
+@media (min-width: 1550px) and (min-height: 1200px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+/* ------- min-width: 1600px ------- */
+
+@media (min-width: 1600px) and (min-height: 1300px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 1600px) and (min-height: 1400px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1600px) and (min-height: 1500px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+/* ------- min-width: 1650px ------- */
+
+@media (min-width: 1650px) and (min-height: 1200px) {
+    .bookLink {
+        top: 97.5%;
+    }
+
+    .bigSign {
+        font-size: 7rem;
+        margin-top: -5%;
+        margin-bottom: 2.5%;
+    }
+
+    .smallSign {
+        font-size: 5rem;
+        margin-top: 3.5%;
+    }
+
+    .link {
+        font-size: 1.35rem;
+    }
+}
+
+/* ------- min-width: 1700px ------- */
+
+@media (min-width: 1700px) and (min-height: 1200px) {
+    .bookLink {
+        top: 100%;
+    }
+}
+
+@media (min-width: 1700px) and (min-height: 1300px) {
+    .bookLink {
+        top: 95%;
+        max-width: 27.5rem !important;
+    }
+}
+
+@media (min-width: 1700px) and (min-height: 1400px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 1700px) and (min-height: 1500px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1700px) and (min-height: 1600px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1800px ------- */
+
+@media (min-width: 1800px) and (min-height: 1300px) {
+    .bookLink {
+        top: 97.5%;
+    }
+
+    .link {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1400px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1500px) {
+    .bookLink {
+        top: 92.5%;
+        max-width: 30rem !important;
+    }
+}
+
+
+@media (min-width: 1800px) and (min-height: 1600px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1800px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+/* ------- min-width: 1900px ------- */
+
+@media (min-width: 1900px) and (min-height: 1300px) {
+    .bookLink {
+        top: 100%;
+    }
+}
+
+@media (min-width: 1900px) and (min-height: 1400px) {
+    .bookLink {
+        top: 97.5%;
+    }
+}
+
+@media (min-width: 1900px) and (min-height: 1500px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-width: 1900px) and (min-height: 1600px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1900px) and (min-height: 1800px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+/* ------- min-width: 2000px ------- */
+
+@media (min-width: 2000px) and (min-height: 1400px) {
+    .bookLink {
+        top: 100%;
+        max-width: 35rem !important;
+    }
+
+    .bigSign {
+        font-size: 8rem;
+    }
+
+    .smallSign {
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1500px) {
+    .bookLink {
+        top: 97.5%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1600px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1800px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+/* ------- min-width: 2100px ------- */
+
+@media (min-width: 2100px) and (min-height: 1600px) {
+    .bookLink {
+        top: 95%;
+    }
+}
+
+@media (min-width: 2100px) and (min-height: 1800px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+/* ------- min-width: 2200px ------- */
+
+@media (min-width: 2200px) and (min-height: 1500px) {
+    .bookLink {
+        top: 100%;
+    }
+}
+
+@media (min-width: 2200px) and (min-height: 1600px) {
+    .bookLink {
+        top: 97.5%;
+    }
+}
+
+@media (min-width: 2200px) and (min-height: 1800px) {
+    .bookLink {
+        top: 92.5%;
+    }
+}
+
+/* ------- min-width: 2300px ------- */
+
+@media (min-width: 2300px) and (min-height: 1600px) {
+    .bookLink {
+        top: 100%;
+    }
+}
+
+@media (min-width: 2300px) and (min-height: 1800px) {
+    .bookLink {
+        top: 92.5%;
     }
 }
