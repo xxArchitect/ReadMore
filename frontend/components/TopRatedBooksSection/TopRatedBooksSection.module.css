@@ -297,6 +297,10 @@
     .bookLink {
         width: 60% !important;
     }
+
+    .bigSign {
+        margin: -2% 0 0;
+    }
 }
 
 @media (min-width: 1000px) and (min-height: 600px) {
@@ -595,7 +599,7 @@
 
 @media (min-width: 1500px) and (min-height: 800px) {
     .bookLink {
-        max-width: 18.5rem !important;
+        max-width: 22rem !important;
     }
 
     .bigSign {
