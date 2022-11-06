@@ -1,3 +1,7 @@
+.image {
+
+}
+
 .bookCoverContainer {
     width: 25%;
     height: 100%;
@@ -5,29 +9,406 @@
     margin: 0 0.5%;
     position: relative;
     transition: transform 0.3s;
+    z-index: 1;
 }
 
 /* Use pseudo-element to create shadow */
 .bookCoverContainer.shadow:after {
     content: "";
     position: absolute;
-    z-index: -1;
+    z-index: -5;
     top: 75%;
     left: -25%;
     height: 5%;
     width: 70%;
-    /*background-color: rgba(0, 0, 0, 0.05);*/
-    background: #d41900;
+    background-color: rgba(0, 0, 0, 0.1);
     filter: blur(1rem);
     transform: skewX(60deg);
     transition: all 0.3s;
 }
 
-@media (min-width: 1500px) {
+/* Adapt book cover shadow for different screen sizes */
+
+/* -------------- min-width: 500px -------------- */
+
+@media (min-width: 500px) and (min-height: 600px) {
     .bookCoverContainer.shadow:after {
-        bottom: 0;
+        top: 67.5%;
+        left: -2.5%;
+        height: 5%;
+        width: 80%;
+    }
+}
+
+/* -------------- min-width: 600px -------------- */
+
+@media (min-width: 600px) and (min-height: 600px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+        left: -10%;
+        height: 5%;
+        width: 90%;
+        filter: blur(0.75rem);
+    }
+}
+
+/* -------------- min-width: 700px -------------- */
+
+@media (min-width: 700px) and (min-height: 500px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+        left: -15%;
+        height: 5%;
+        width: 100%;
+        filter: blur(0.75rem);
+    }
+}
+
+@media (min-width: 700px) and (min-height: 600px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+        left: -15%;
+        height: 5%;
+    }
+}
+
+@media (min-width: 700px) and (min-height: 700px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+        left: -15%;
+        height: 2.5%;
+    }
+}
+
+/* -------------- min-width: 800px -------------- */
+
+@media (min-width: 800px) and (min-height: 500px) {
+    .bookCoverContainer.shadow:after {
+        top: 90%;
+        left: -15%;
+        height: 5%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 800px) and (min-height: 700px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+        left: -15%;
+        height: 2%;
+        width: 90%;
+    }
+}
+
+@media (min-width: 800px) and (min-height: 800px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+        left: -15%;
+        height: 2%;
+        width: 90%;
+    }
+}
+
+/* -------------- min-width: 900px -------------- */
+
+@media (min-width: 900px) and (min-height: 500px) {
+    .bookCoverContainer.shadow:after {
+        left: -5%;
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) and (min-height: 700px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+        left: -15%;
+        height: 5%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) and (min-height: 800px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+        left: -10%;
+        width: 90%;
+    }
+}
+
+/* -------------- min-width: 1000px -------------- */
+
+@media (min-width: 1000px) and (min-height: 500px) {
+    .bookCoverContainer.shadow:after {
+        left: 5%;
+        width: 70%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 600px) {
+    .bookCoverContainer.shadow:after {
         left: 0;
-        height: 15%;
-        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+    .bookCoverContainer.shadow:after {
+        left: -15%;
+        top: 90%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 800px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 900px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* -------------- min-width: 1100px -------------- */
+
+@media (min-width: 1100px) and (min-height: 800px) {
+    .bookCoverContainer.shadow:after {
+        top: 90%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 900px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 1000px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 1100px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* -------------- min-width: 1200px -------------- */
+
+@media (min-width: 1200px) and (min-height: 900px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1000px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1100px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+    }
+}
+
+@media (min-width: 1200px) and (min-height: 1200px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* ------- min-width: 1300px ------- */
+
+@media (min-width: 1300px) and (min-height: 700px) {
+    .bookCoverContainer.shadow:after {
+        top: 90%;
+        left: -10%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1000px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1100px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1200px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 1300px) and (min-height: 1300px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* -------------- min-width: 1500px -------------- */
+
+@media (min-width: 1500px) and (min-width: 700px) {
+    .bookCoverContainer.shadow:after {
+        left: 5%;
+        width: 70%;
+        top: 90%;
+    }
+
+    @media (min-width: 1500px) and (min-height: 800px) {
+        .bookCoverContainer.shadow:after {
+            top: 92.5%;
+            left: 0;
+        }
+    }
+
+    @media (min-width: 1500px) and (min-height: 1100px) {
+        .bookCoverContainer.shadow:after {
+            top: 90%;
+            left: -5%;
+        }
+    }
+
+    @media (min-width: 1500px) and (min-height: 1200px) {
+        .bookCoverContainer.shadow:after {
+            top: 85%;
+        }
+    }
+
+    @media (min-width: 1500px) and (min-height: 1300px) {
+        .bookCoverContainer.shadow:after {
+            top: 82.5%;
+        }
+    }
+
+    @media (min-width: 1500px) and (min-height: 1400px) {
+        .bookCoverContainer.shadow:after {
+            top: 80%;
+        }
+    }
+
+    @media (min-width: 1500px) and (min-height: 1500px) {
+        .bookCoverContainer.shadow:after {
+            top: 77.5%;
+        }
+    }
+}
+
+/* ------- min-width: 1550px ------- */
+
+@media (min-width: 1550px) and (min-height: 1200px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+    }
+}
+
+/* ------- min-width: 1600px ------- */
+
+@media (min-width: 1600px) and (min-height: 1400px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+    }
+}
+
+@media (min-width: 1600px) and (min-height: 1500px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 1600px) and (min-height: 1600px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* ------- min-width: 1800px ------- */
+
+@media (min-width: 1800px) and (min-height: 1400px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1500px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1600px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+    }
+}
+
+
+@media (min-width: 1800px) and (min-height: 1700px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 1800px) and (min-height: 1800px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
+    }
+}
+
+/* ------- min-width: 2000px ------- */
+
+@media (min-width: 2000px) and (min-height: 1400px) {
+    .bookCoverContainer.shadow:after {
+        top: 92.5%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1500px) {
+    .bookCoverContainer.shadow:after {
+        top: 90%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1600px) {
+    .bookCoverContainer.shadow:after {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1700px) {
+    .bookCoverContainer.shadow:after {
+        top: 85%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1800px) {
+    .bookCoverContainer.shadow:after {
+        top: 82.5%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 1900px) {
+    .bookCoverContainer.shadow:after {
+        top: 80%;
+    }
+}
+
+@media (min-width: 2000px) and (min-height: 2000px) {
+    .bookCoverContainer.shadow:after {
+        top: 77.5%;
     }
 }
