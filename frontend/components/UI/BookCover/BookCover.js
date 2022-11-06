@@ -18,10 +18,9 @@ export default function BookCover({
     >
       <Image
         src={src}
-        layout={"fill"}
-        objectFit={"contain"}
+        fill={true}
         alt={"Sample book cover"}
-        style={imageStyle}
+        style={{ ...imageStyle, objectFit: "contain" }}
       />
       {children}
     </div>
