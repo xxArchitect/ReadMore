@@ -427,6 +427,7 @@
 @media (min-width: 1100px) and (min-height: 900px) {
     .bookLink {
         top: 92.5%;
+        max-width: 17.5rem !important;
     }
 }
 
@@ -444,6 +445,12 @@
 
 /* ------- min-width: 1200px ------- */
 
+@media (min-width: 1200px) and (min-height: 800px) {
+    .bookLink {
+        max-width: 19rem !important;
+    }
+}
+
 @media (min-width: 1200px) and (min-height: 900px) {
     .bookLink {
         max-width: 18.5rem !important;
@@ -453,7 +460,7 @@
 
 @media (min-width: 1200px) and (min-height: 1000px) {
     .bookLink {
-        top: 90%;
+        top: 92.5%;
     }
 }
 
@@ -675,7 +682,7 @@
 
 /* ------- min-width: 1650px ------- */
 
-@media (min-width: 1650px) and (min-height: 1200px) {
+@media (min-width: 1650px) and (min-height: 1200px) and (max-height: 1250px) {
     .bookLink {
         top: 97.5%;
     }
@@ -693,6 +700,18 @@
 
     .link {
         font-size: 1.35rem;
+    }
+}
+
+@media (min-width: 1650px) and (min-height: 1550px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 1650px) and (min-height: 1650px) {
+    .bookLink {
+        top: 85%;
     }
 }
 
@@ -868,6 +887,30 @@
     }
 }
 
+@media (min-width: 2200px) and (min-height: 1900px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 2200px) and (min-height: 2000px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 2200px) and (min-height: 2100px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+@media (min-width: 2200px) and (min-height: 2200px) {
+    .bookLink {
+        top: 82.5%;
+    }
+}
+
 /* ------- min-width: 2300px ------- */
 
 @media (min-width: 2300px) and (min-height: 1600px) {
@@ -879,5 +922,29 @@
 @media (min-width: 2300px) and (min-height: 1800px) {
     .bookLink {
         top: 92.5%;
+    }
+}
+
+@media (min-width: 2300px) and (min-height: 1900px) {
+    .bookLink {
+        top: 90%;
+    }
+}
+
+@media (min-width: 2300px) and (min-height: 2000px) {
+    .bookLink {
+        top: 87.5%;
+    }
+}
+
+@media (min-width: 2300px) and (min-height: 2100px) {
+    .bookLink {
+        top: 85%;
+    }
+}
+
+@media (min-width: 2300px) and (min-height: 2300px) {
+    .bookLink {
+        top: 82.5%;
     }
 }
