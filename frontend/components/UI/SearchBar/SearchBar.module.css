@@ -1,7 +1,7 @@
 .searchBarWrapper {
     width: 100vw;
     background: none;
-    z-index: 0;
+    z-index: 1;
     transform: translateY(-50%);
     height: 6.5%;
     max-height: 3.5rem;
