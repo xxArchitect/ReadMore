@@ -1,3 +1,91 @@
 .bookSearchByGenre {
     background-color: var(--bg-color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sign {
+    color: #CECAC3;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+    height: 10%;
+    margin-top: 3.5%;
+}
+
+.bookGenresContainer {
+    width: 80%;
+    height: 50%;
+    margin: 0 10%;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1.25fr;
+}
+
+.bookGenresContainer p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    color: #0D1713;
+    margin: 0;
+    position: relative;
+    transition: color 0.35s ease 0s;;
+}
+
+.bookGenresContainer p:hover {
+    cursor: pointer;
+    color: #4D7F7B;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.smallRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.smallContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.lastColumnText {
+    display: inline-block;
+}
+
+/* Animated Underline Hover */
+/* Source: https://codepen.io/jstn/pen/mdoOZJ */
+.bookGenresContainer p:after {
+    background-color: #0D1713;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transition: width 0.35s ease 0s, left 0.35s ease 0s, background-color 0.35s ease 0s;
+    width: 0;
+    z-index: 2;
+}
+
+.bookGenresContainer p:hover:after {
+    width: 100%;
+    left: 0;
+    background-color: #4D7F7B;
 }
