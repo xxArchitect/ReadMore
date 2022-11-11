@@ -3,9 +3,7 @@ import classes from "./BookSearchByGenreSection.module.css";
 export default function BookSearchByGenreSection() {
   return (
     <section className={classes.bookSearchByGenre}>
-      <h1 className={[classes.sign, classes.bigSign].join(" ")}>
-        Select books by genres
-      </h1>
+      <h1 className={classes.sign}>Select books by genres</h1>
       <div className={classes.bookGenresContainer}>
         <div className={classes.column}>
           <p>Fiction</p>
