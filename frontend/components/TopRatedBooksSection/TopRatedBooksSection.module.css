@@ -53,12 +53,14 @@
     opacity: 0;
     transform: translateY(100%);
     transition: all 1s;
+    will-change: transform;
 }
 
 .bookContainer.slide {
     opacity: 1;
     transform: translateY(0);
-    transition: all 0.6s;
+    transition: all 0.5s ease-out;
+    will-change: transform;
 }
 
 .bookContainer:hover {
