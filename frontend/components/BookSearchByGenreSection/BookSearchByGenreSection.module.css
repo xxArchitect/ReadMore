@@ -91,23 +91,19 @@
 }
 
 /* Adjust font of the genres based on the screen size */
-@media (min-width: 1600px) and (min-height: 800px) {
-    .sign {
-        font-size: 6rem;
+@media (min-height: 600px) {
+    .bookGenresContainer p {
+        font-size: 1rem;
     }
 
-    .bookGenresContainer p {
-        font-size: 2.25rem;
+    .sign {
+        font-size: 3rem;
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-height: 800px) {
     .bookGenresContainer p {
-        font-size: 2rem;
-    }
-
-    .sign {
-        font-size: 5rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -121,18 +117,22 @@
     }
 }
 
-@media (min-height: 800px) {
+@media (min-width: 1300px) {
     .bookGenresContainer p {
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-height: 600px) {
-    .bookGenresContainer p {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .sign {
-        font-size: 3rem;
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1500px) and (min-height: 800px) {
+    .sign {
+        font-size: 6rem;
+    }
+
+    .bookGenresContainer p {
+        font-size: 2.25rem;
     }
 }
