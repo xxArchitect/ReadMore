@@ -67,8 +67,18 @@
     cursor: pointer;
 }
 
-.bookContainer:hover .link {
-    margin: 0 5%;
+.leftLine {
+    width: 60%;
+    height: 1px;
+    background-color: #0D1713;
+    transition: width 0.3s ease;
+}
+
+.rightLine {
+    width: 0;
+    height: 0;
+    background-color: #0D1713;
+    transition: width 0.3s ease;
 }
 
 .bookContainer:hover .leftLine {
@@ -77,13 +87,13 @@
 
 .bookContainer:hover .rightLine {
     width: 27.5%;
-    border: 1px solid #0D1713;
+    height: 1px;
 }
 
 .bookLink {
     max-width: 100%;
     overflow: hidden;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -98,16 +108,8 @@
     transform: translateX(-50%);
 }
 
-.leftLine {
-    width: 60%;
-    border: 1px solid #0D1713;
-    transition: width 0.3s ease;
-}
-
-.rightLine {
-    width: 0;
-    border: none;
-    transition: width 0.3s ease;
+.bookContainer.slide .bookLink {
+    display: flex;
 }
 
 .link {
@@ -123,6 +125,10 @@
     min-width: 40%;
     background: transparent;
     transition: all 0.3s ease;
+}
+
+.bookContainer:hover .link {
+    margin: 0 5%;
 }
 
 /* Adapt book link for different screen sizes */
