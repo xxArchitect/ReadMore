@@ -20,14 +20,16 @@ export default function BookSearchByGenreSection() {
         <div className={classes.column}>
           <div
             style={{
-              width: "75%",
+              width: "100%",
+              textAlign: "center",
             }}
           >
             <p className={classes.lastColumnText}>History & Biography</p>
           </div>
           <div
             style={{
-              width: "92.5%",
+              width: "100%",
+              textAlign: "center",
             }}
           >
             <p className={classes.lastColumnText}>Graphic Novels & Comics</p>
@@ -36,7 +38,7 @@ export default function BookSearchByGenreSection() {
           <div className={classes.smallRow}>
             <div
               style={{
-                width: "35%",
+                width: "45%",
                 textAlign: "center",
               }}
             >
@@ -45,7 +47,7 @@ export default function BookSearchByGenreSection() {
             <div
               style={{
                 textAlign: "center",
-                width: "65%",
+                width: "55%",
               }}
             >
               <p className={classes.lastColumnText}>Horror</p>
@@ -55,14 +57,14 @@ export default function BookSearchByGenreSection() {
             <div
               style={{
                 textAlign: "center",
-                width: "35%",
+                width: "45%",
               }}
             >
               <p className={classes.lastColumnText}>Romance</p>
             </div>
             <div
               style={{
-                width: "65%",
+                width: "55%",
                 textAlign: "center",
               }}
             >
