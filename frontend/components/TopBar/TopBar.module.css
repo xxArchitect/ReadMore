@@ -84,7 +84,7 @@
     }
 
     .buttons button {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 
     .buttons button:after {
@@ -96,8 +96,8 @@
     }
 }
 
-@media (min-width: 1000px) and (min-height: 800px) {
-    .topBar {
-        height: 5.5vh;
+@media (min-width: 1100px) {
+    .buttons button {
+        font-size: 1.25rem;
     }
 }
