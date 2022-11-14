@@ -91,8 +91,14 @@
 }
 
 
-/* Adjust font of the genre links based on the screen size */
+/* Adjust font of the genre links and size of the sign based on the screen size */
 /* -------------- min-height: 600px -------------- */
+
+@media (min-width: 600px) and (min-height: 600px) {
+    .sign {
+        font-size: 3rem;
+    }
+}
 
 @media (min-width: 800px) and (min-height: 600px) {
     .bookGenresContainer p {
@@ -100,9 +106,19 @@
     }
 }
 
+@media (min-width: 1100px) and (min-height: 600px) {
+    .bookGenresContainer p {
+        font-size: 1.35rem;
+    }
+}
+
 @media (min-width: 1200px) and (min-height: 600px) {
     .bookGenresContainer p {
         font-size: 1.25rem;
+    }
+
+    .sign {
+        font-size: 4rem;
     }
 }
 
@@ -111,6 +127,17 @@
 @media (min-width: 900px) and (min-height: 900px) {
     .bookGenresContainer p {
         font-size: 1.25rem;
+    }
+
+    .sign {
+        margin-top: 5%;
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1100px) and (min-height: 900px) {
+    .bookGenresContainer p {
+        font-size: 1.4rem;
     }
 }
 
@@ -124,6 +151,10 @@
     .bookGenresContainer p {
         font-size: 1.75rem;
     }
+
+    .sign {
+        font-size: 5rem;
+    }
 }
 
 /* -------------- min-height: 1000px -------------- */
@@ -131,6 +162,10 @@
 @media (min-width: 1000px) and (min-height: 1000px) {
     .bookGenresContainer p {
         font-size: 1.25rem;
+    }
+
+    .sign {
+        font-size: 4.5rem;
     }
 }
 
@@ -146,19 +181,8 @@
     }
 }
 
-@media (min-width: 1500px) and (min-height: 1000px) {
-    .bookGenresContainer p {
-        font-size: 2rem;
-    }
-}
-
 /* -------------- min-height: 1100px -------------- */
 
-@media (min-width: 1100px) and (min-height: 1100px) {
-    .bookGenresContainer p {
-        font-size: 1.4rem;
-    }
-}
 
 @media (min-width: 1200px) and (min-height: 1100px) {
     .bookGenresContainer p {
@@ -175,32 +199,5 @@
 @media (min-width: 1500px) and (min-height: 1100px) {
     .bookGenresContainer p {
         font-size: 2rem;
-    }
-}
-
-
-/* Adjust font of the sign depending on the screen size */
-
-@media (min-width: 600px) and (min-height: 600px) {
-    .sign {
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 900px) and (min-height: 1000px) {
-    .sign {
-        font-size: 4rem;
-    }
-}
-
-@media (min-width: 1300px) and (min-height: 1000px) {
-    .sign {
-        font-size: 5rem;
-    }
-}
-
-@media (min-width: 1500px) and (min-height: 1000px) {
-    .sign {
-        font-size: 6rem;
     }
 }
