@@ -1,8 +1,9 @@
 import classes from "./TopBar.module.css";
+import { Fragment } from "react";
 
 export default function TopBar() {
   return (
-    <nav className={classes.topBar}>
+    <Fragment>
       <h1 className={classes.logo}>ReadMore.</h1>
       <div className={classes.buttons}>
         <button>RATINGS</button>
@@ -11,6 +12,6 @@ export default function TopBar() {
         <div className={classes.circle} />
         <button>LOG OUT</button>
       </div>
-    </nav>
+    </Fragment>
   );
 }
