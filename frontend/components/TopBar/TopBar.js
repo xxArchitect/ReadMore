@@ -4,7 +4,9 @@ import { Fragment } from "react";
 export default function TopBar() {
   return (
     <Fragment>
-      <h1 className={classes.logo}>ReadMore.</h1>
+      <div className={classes.logoWrapper}>
+        <h1 className={classes.logo}>ReadMore.</h1>
+      </div>
       <div className={classes.buttons}>
         <button>RATINGS</button>
         <div className={classes.circle} />

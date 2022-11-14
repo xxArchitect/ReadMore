@@ -1,4 +1,4 @@
-.logo,
+.logoWrapper,
 .buttons {
     position: fixed;
     z-index: 5;
@@ -6,12 +6,21 @@
     min-height: 65px;
 }
 
+.logoWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 2.125rem;
+    align-items: center;
+}
+
 .logo {
     font-weight: 400;
     font-size: 2rem;
     color: var(--main-color-1);
-    margin: 0 0 0 2.125rem;
+    margin: 0;
     font-family: 'Cormorant Garamond', serif;
+    text-align: center;
 }
 
 .buttons {
