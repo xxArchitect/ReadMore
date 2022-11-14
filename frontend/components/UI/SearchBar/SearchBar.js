@@ -31,8 +31,12 @@ function SearchBar(props, ref) {
       }}
     >
       <div className={`${classes.searchBar} ${searchBarClass}`} ref={ref}>
-        <MagnifyingGlass />
-        <p>Search books...</p>
+        <form>
+          <label htmlFor={"book-name"}>
+            <MagnifyingGlass />
+          </label>
+          <input placeholder={"Search books..."} id={"book-name"} />
+        </form>
       </div>
     </div>
   );

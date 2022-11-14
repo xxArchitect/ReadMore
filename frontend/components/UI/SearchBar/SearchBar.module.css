@@ -56,6 +56,7 @@
 }
 
 .searchBar.landing svg {
+    margin: 0 0.75rem;
     width: 1.5rem;
     height: 1.5rem;
     color: var(--main-color-1);
@@ -64,6 +65,7 @@
 .searchBar.topRatedBooks svg {
     width: 1.3rem;
     height: 1.3rem;
+    margin: 0 1.5rem 0 0.75rem;
     color: #BEAF98;
     transform: scale(calc(1 / 0.85), calc(1 / 0.6));
 }
@@ -71,34 +73,69 @@
 .searchBar.searchBooksByGenre svg {
     width: 1.3rem;
     height: 1.3rem;
+    margin: 0 1.5rem 0 0.75rem;
     color: #f1f1f1;
     transform: scale(calc(1 / 0.85), calc(1 / 0.6));
 }
 
-.searchBar p {
+.searchBar form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 5;
+}
+
+.searchBar form input {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
-    margin: 0 0 0 0.5rem;
-}
-
-.searchBar.landing p {
+    /*margin: 0 0 0 0.5rem;*/
+    background: none;
+    border: none;
     font-size: 1.6rem;
     color: var(--main-color-1);
+    width: 12.5rem;
+    transition: width 0.15s;
 }
 
-.searchBar.topRatedBooks p {
+.searchBar form input::placeholder {
+    color: var(--main-color-1);
+    opacity: 1;
+}
+
+.searchBar form input:focus {
+    outline: none;
+    width: 100%;
+}
+
+.searchBar.topRatedBooks form input {
     font-size: 1.3rem;
     color: #BEAF98;
-    margin: 0 0 0 1.5rem;
+    width: 12rem;
     transform: scale(calc(1 / 0.85), calc(1 / 0.6));
 }
 
-.searchBar.searchBooksByGenre p {
+.searchBar.topRatedBooks form input::placeholder {
+    color: #BEAF98;
+}
+
+.searchBar.searchBooksByGenre form input {
     font-size: 1.3rem;
     color: #f1f1f1;
-    margin: 0 0 0 1.5rem;
+    width: 12rem;
     transform: scale(calc(1 / 0.85), calc(1 / 0.6));
+}
+
+.searchBar.searchBooksByGenre form input::placeholder {
+    color: #f1f1f1;
+}
+
+.searchBar.topRatedBooks form input:focus,
+.searchBar.searchBooksByGenre form input:focus {
+    width: 100%;
+    margin: 0 0 0 1rem;
 }
 
 /* Frosted Glass Effect */
