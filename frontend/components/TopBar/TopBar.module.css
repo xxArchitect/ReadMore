@@ -87,6 +87,13 @@
     background-color: #CECAC3;
 }
 
+@media (min-width: 800px) {
+    .buttons button {
+        font-size: 1rem;
+    }
+}
+
+
 @media (min-width: 1000px) {
     .logo {
         font-size: 3rem;
